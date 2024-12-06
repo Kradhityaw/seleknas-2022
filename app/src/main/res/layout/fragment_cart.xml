@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/light_brown"
+    android:layout_height="match_parent"
+    tools:context=".CartFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Borrow:"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/startBorrow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="5">
+
+                <TextView
+                    android:id="@+id/startBorrowText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Start Date"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="-"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/endBorrow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="5">
+
+                <TextView
+                    android:id="@+id/endBorrowText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="End Date"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/brown"
+            android:text="Booking Borrow"
+            android:id="@+id/cartBooking"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+</LinearLayout>
